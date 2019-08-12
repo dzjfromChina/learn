@@ -1,14 +1,19 @@
 package multithreading;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * @author duzj
  * @create 2019-08-11 10:37
  * synchronized
+ *
+ * 如果出现异常会释放锁
  */
 public class SynchronizedDemo {
 
     private int count = 0;
     private static int count2 = 0;
+
 
     private Object o = new Object();
 

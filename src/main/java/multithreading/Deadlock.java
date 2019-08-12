@@ -19,8 +19,9 @@ public class Deadlock {
 
 class Demo2 {
 
-    private Object A = new Object();
-    private Object B = new Object();
+    //final 是为了不让对象改变 导致锁改变失效
+    private final Object A = new Object();
+    private final Object B = new Object();
 
     public  void A(){
         synchronized(A){
